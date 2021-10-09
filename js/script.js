@@ -320,13 +320,7 @@ Game.prototype.movePlayer = function(event) {
  */
   Game.prototype.checkGoal = function () {
     let body = document.querySelector('body');
-
     if (this.player.y == this.goal.y &&
-      this.player.x == this.goal.x &&
-      this.level_idx == 2) {
-      body.className = 'final';
-    }
-    else if (this.player.y == this.goal.y &&
       this.player.x == this.goal.x) {
 
       body.className = 'success';
