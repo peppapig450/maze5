@@ -132,24 +132,6 @@ button#down::before {
   opacity: 1;
   transition: opacity 0.2 ease;
 }
-
-#final-msg {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  position: absolute;
-  padding: 10px 10px;
-  background-color: blue;
-  color: yellow;
-  width: calc(100% - 10px);
-}
-
-body.final #final-msg {
-  opacity: 1;
-  transition: opacity 0.2 ease;
-}
-
-
-
 /*
  * Layers and tiles are positioned absolutely
  * within coordinate system of .game-map
