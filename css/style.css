@@ -28,7 +28,7 @@ body.success  {
 p {
   margin: 10px 0px;
   padding: 0px;
-  
+
 }
 
 
@@ -56,7 +56,7 @@ p {
   align-items: center;
   justify-content: center;
 }
-/* 
+/*
  * General button styles
  */
 #controls button {
@@ -133,11 +133,26 @@ button#down::before {
   transition: opacity 0.2 ease;
 }
 
+#final-msg {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  padding: 10px 10px;
+  background-color: blue;
+  color: yellow;
+  width: calc(100% - 10px);
+}
+
+body.final #final-msg {
+  opacity: 1;
+  transition: opacity 0.2 ease;
+}
+
 
 
 /*
  * Layers and tiles are positioned absolutely
- * within coordinate system of .game-map 
+ * within coordinate system of .game-map
  */
 div.layer,
 div.layer div {
@@ -160,7 +175,7 @@ div.layer div {
   background-color: skyblue;
 }
 /*
- * grassland theme  
+ * grassland theme
  */
 .grassland .floor {
   background-color: #7bb76d;
@@ -172,7 +187,7 @@ div.layer div {
  background-color: #b2ccec;
 }
 
-/* 
+/*
  * dungeon theme
  */
 .dungeon .floor {
@@ -187,7 +202,7 @@ div.layer div {
 /*
  * player and goal are slightly smaller than tiles
  */
-.player, 
+.player,
 .goal {
   transform-origin: center;
   transform:scale(0.85);
@@ -210,14 +225,14 @@ div.layer div {
 /*
  * Player wobbles when colliding with wall or border
  */
-.player.collide {  
+.player.collide {
   animation: wobble 0.5s;
   animation-iteration-count: infinite;
   transition: background-color 0.2s;
-  
+
 }
 
-/* 
+/*
  * Wobble animation
  */
 @keyframes wobble {
